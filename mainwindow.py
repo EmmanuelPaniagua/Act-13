@@ -19,6 +19,17 @@ class MainWindow(QMainWindow):
         self.ui.mostrar_tabla_pushButton.clicked.connect(self.mostrar_tabla)
         self.ui.buscar_pushButton.clicked.connect(self.buscar_id)
 
+        self.ui.dibujar.clicked.connect(self.dibujar)
+        self.ui.limpiar.clicked.connect(self.limpiar)
+
+    @Slot()
+    def dibujar (self):
+        print ('dibujar')
+
+    @Slot()
+    def limpiar (self):
+        print ('limpiar')
+
     @Slot()
     def buscar_id(self):
         id = self.ui.buscar_lineEdit.text()
