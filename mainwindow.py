@@ -29,7 +29,14 @@ class MainWindow(QMainWindow):
     @Slot()
     def dibujar (self):
         pen = QPen ()
-        pen.setWidth(8)
+        pen.setWidth(3)
+
+        r = 145
+        g = 234
+        b = 123
+        color = QColor(r, g, b)
+        pen.setColor(color)
+
         self.scene.addEllipse(0,0,3,3, pen)
         self.scene.addEllipse(500,500,3,3, pen)
         self.scene.addLine(0,0,500,500, pen)
