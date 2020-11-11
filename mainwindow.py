@@ -29,17 +29,19 @@ class MainWindow(QMainWindow):
     @Slot()
     def dibujar (self):
         pen = QPen ()
-        pen.setWidth(3)
+        pen.setWidth(2)
+        
+        for particula in self.administrador:
+            r = particula.red
+            g = particula.green
+            b = particula.blue
+            color = QColor(r, g, b)
+            pen.setColor(color)
 
-        r = 145
-        g = 234
-        b = 123
-        color = QColor(r, g, b)
-        pen.setColor(color)
-
-        self.scene.addEllipse(0,0,3,3, pen)
-        self.scene.addEllipse(500,500,3,3, pen)
-        self.scene.addLine(0,0,500,500, pen)
+            self.scene.addEllipse(particula.origen_x,particula.origen_y,3,3, pen)
+            self.scene.addEllipse(particula.destino_x,particula.destino_y,3,3, pen)
+            self.scene.addLine(particula.origen_x+3,particula.origen_y+3,particula.destino_x,particula.destino_y, pen)
+        
 
     @Slot()
     def limpiar (self):
