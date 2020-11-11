@@ -43,7 +43,7 @@ class MainWindow(QMainWindow):
 
     @Slot()
     def limpiar (self):
-        print ('limpiar')
+        self.scene.clear()
 
     @Slot()
     def buscar_id(self):
