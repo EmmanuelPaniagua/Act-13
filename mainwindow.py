@@ -1,8 +1,9 @@
-from PySide2.QtWidgets import QMainWindow, QFileDialog, QMessageBox, QTableWidgetItem
+from PySide2.QtWidgets import QMainWindow, QFileDialog, QMessageBox, QTableWidgetItem, QGraphicsScene
 from PySide2.QtCore import Slot
 from ui_mainwindow import Ui_MainWindow
 from Libreria_Part.administrador import Administrador
 from Libreria_Part.particula import Particula
+from PySide2.QtGui import QPen, QColor, QTransform
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -22,9 +23,16 @@ class MainWindow(QMainWindow):
         self.ui.dibujar.clicked.connect(self.dibujar)
         self.ui.limpiar.clicked.connect(self.limpiar)
 
+        self.scene = QGraphicsScene()
+        self.ui.graphicsView.setScene(self.scene)
+
     @Slot()
     def dibujar (self):
-        print ('dibujar')
+        pen = QPen ()
+        pen.setWidth(8)
+        self.scene.addEllipse(0,0,3,3, pen)
+        self.scene.addEllipse(500,500,3,3, pen)
+        self.scene.addLine(0,0,500,500, pen)
 
     @Slot()
     def limpiar (self):
