@@ -47,7 +47,7 @@
          <item row="7" column="2">
           <widget class="QSpinBox" name="red_spinBox">
            <property name="maximum">
-            <number>500</number>
+            <number>255</number>
            </property>
           </widget>
          </item>
@@ -61,7 +61,7 @@
          <item row="8" column="2">
           <widget class="QSpinBox" name="green_spinBox">
            <property name="maximum">
-            <number>500</number>
+            <number>255</number>
            </property>
           </widget>
          </item>
@@ -137,7 +137,7 @@
          <item row="9" column="2">
           <widget class="QSpinBox" name="blue_spinBox">
            <property name="maximum">
-            <number>500</number>
+            <number>255</number>
            </property>
           </widget>
          </item>
