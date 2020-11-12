@@ -42,7 +42,7 @@ class Ui_MainWindow(object):
 
         self.red_spinBox = QSpinBox(self.groupBox)
         self.red_spinBox.setObjectName(u"red_spinBox")
-        self.red_spinBox.setMaximum(500)
+        self.red_spinBox.setMaximum(255)
 
         self.gridLayout.addWidget(self.red_spinBox, 7, 2, 1, 1)
 
@@ -53,7 +53,7 @@ class Ui_MainWindow(object):
 
         self.green_spinBox = QSpinBox(self.groupBox)
         self.green_spinBox.setObjectName(u"green_spinBox")
-        self.green_spinBox.setMaximum(500)
+        self.green_spinBox.setMaximum(255)
 
         self.gridLayout.addWidget(self.green_spinBox, 8, 2, 1, 1)
 
@@ -116,7 +116,7 @@ class Ui_MainWindow(object):
 
         self.blue_spinBox = QSpinBox(self.groupBox)
         self.blue_spinBox.setObjectName(u"blue_spinBox")
-        self.blue_spinBox.setMaximum(500)
+        self.blue_spinBox.setMaximum(255)
 
         self.gridLayout.addWidget(self.blue_spinBox, 9, 2, 1, 1)
 
